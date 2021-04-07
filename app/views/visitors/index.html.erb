@@ -1,0 +1,10 @@
+<%= render 'visitors/partitions/header' %>
+<%= render 'visitors/partitions/hero_section' %>
+<main id="main">
+  <% %w[clients about_us counts services more_services features testimonials portfolio team pricing faq contact].each do |section| %>
+    <%= render 'visitors/partitions/'+section %>
+  <% end %>
+</main> <!-- End #main -->
+<%= render 'visitors/partitions/footer' %>
+
+<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>

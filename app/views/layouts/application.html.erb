@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content=" " name="descriptison" >
+    <meta content=" " name="keywords">
+
+    <title>Vesperr Bootstrap Template - Index</title>
+
+    <!-- Favicons -->
+    <%= favicon_link_tag 'favicon.png' %>
+    <%= favicon_link_tag 'apple-touch-icon.png' %>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+
+    <!-- Vendor JS Files -->
+<%= javascript_include_tag asset_path('jquery.min.js'), 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag asset_path('bootstrap.bundle.js'), 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag asset_path('jquery.easing.min.js'), 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag asset_path('validate.js'), 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag asset_path('jquery.waypoints.min.js'), 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag asset_path('counterup.min.js'), 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag asset_path('owl.carousel.min.js'), 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag asset_path('isotope.pkgd.min.js'), 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag asset_path('venobox.min.js'), 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag asset_path('aos.js'), 'data-turbolinks-track': 'reload' %>
+
+  <!-- Template Main JS File -->
+<%= javascript_include_tag asset_path('main.js'), 'data-turbolinks-track': 'reload' %>
+
+  </body>
+</html>
