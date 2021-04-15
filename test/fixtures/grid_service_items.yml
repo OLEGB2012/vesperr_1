@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  service_section: one
+  position: 1
+  header: MyString
+  description: MyString
+  active: false
+
+two:
+  service_section: two
+  position: 1
+  header: MyString
+  description: MyString
+  active: false

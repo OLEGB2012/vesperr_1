@@ -10,9 +10,104 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_04_15_182257) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "about_us_sections", force: :cascade do |t|
+    t.bigint "section_id"
+    t.text "left_side"
+    t.text "right_side"
+    t.integer "happy_clients_counter"
+    t.integer "projects_counter"
+    t.integer "years_counter"
+    t.integer "awards_counter"
+    t.string "happy_clients_text"
+    t.string "projects_text"
+    t.string "years_text"
+    t.string "awards_text"
+    t.string "happy_clients_class"
+    t.string "projects_class"
+    t.string "years_class"
+    t.string "awards_class"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["section_id"], name: "index_about_us_sections_on_section_id"
+  end
+
+  create_table "clients", force: :cascade do |t|
+    t.bigint "section_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["section_id"], name: "index_clients_on_section_id"
+  end
+
+  create_table "grid_service_items", force: :cascade do |t|
+    t.bigint "service_section_id"
+    t.integer "position"
+    t.string "header"
+    t.string "description"
+    t.boolean "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["service_section_id"], name: "index_grid_service_items_on_service_section_id"
+  end
+
+  create_table "horizon_service_items", force: :cascade do |t|
+    t.bigint "service_section_id"
+    t.integer "position"
+    t.string "header"
+    t.string "description"
+    t.string "icon_class"
+    t.boolean "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["service_section_id"], name: "index_horizon_service_items_on_service_section_id"
+  end
+
+  create_table "sections", force: :cascade do |t|
+    t.bigint "setting_id"
+    t.integer "position"
+    t.string "name"
+    t.boolean "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["setting_id"], name: "index_sections_on_setting_id"
+  end
+
+  create_table "service_sections", force: :cascade do |t|
+    t.bigint "section_id"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["section_id"], name: "index_service_sections_on_section_id"
+  end
+
+  create_table "settings", force: :cascade do |t|
+    t.string "name"
+    t.string "slogan_basic"
+    t.string "slogan_additional"
+    t.string "get_started"
+    t.string "call_to_action"
+    t.string "address"
+    t.string "email"
+    t.string "phone"
+    t.string "twitter_url"
+    t.string "facebook_url"
+    t.string "instagram_url"
+    t.string "linkedin_url"
+    t.text "privacy_policy"
+    t.text "terms_of_use"
+    t.boolean "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "about_us_sections", "sections"
+  add_foreign_key "clients", "sections"
+  add_foreign_key "grid_service_items", "service_sections"
+  add_foreign_key "horizon_service_items", "service_sections"
+  add_foreign_key "sections", "settings"
+  add_foreign_key "service_sections", "sections"
 end

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Horizon Service Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Service section</th>
+      <th>Position</th>
+      <th>Header</th>
+      <th>Description</th>
+      <th>Icon class</th>
+      <th>Active</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @horizon_service_items.each do |horizon_service_item| %>
+      <tr>
+        <td><%= horizon_service_item.service_section %></td>
+        <td><%= horizon_service_item.position %></td>
+        <td><%= horizon_service_item.header %></td>
+        <td><%= horizon_service_item.description %></td>
+        <td><%= horizon_service_item.icon_class %></td>
+        <td><%= horizon_service_item.active %></td>
+        <td><%= link_to 'Show', horizon_service_item %></td>
+        <td><%= link_to 'Edit', edit_horizon_service_item_path(horizon_service_item) %></td>
+        <td><%= link_to 'Destroy', horizon_service_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Horizon Service Item', new_horizon_service_item_path %>

@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  section: one
+  left_side: MyText
+  right_side: MyText
+  happy_clients_counter: 1
+  projects_counter: 1
+  years_counter: 1
+  awards_counter: 1
+  happy_clients_text: MyString
+  projects_text: MyString
+  years_text: MyString
+  awards_text: MyString
+  happy_clients_class: MyString
+  projects_class: MyString
+  years_class: MyString
+  awards_class: MyString
+
+two:
+  section: two
+  left_side: MyText
+  right_side: MyText
+  happy_clients_counter: 1
+  projects_counter: 1
+  years_counter: 1
+  awards_counter: 1
+  happy_clients_text: MyString
+  projects_text: MyString
+  years_text: MyString
+  awards_text: MyString
+  happy_clients_class: MyString
+  projects_class: MyString
+  years_class: MyString
+  awards_class: MyString
