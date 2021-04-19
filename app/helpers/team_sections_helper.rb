@@ -1,0 +1,2 @@
+module TeamSectionsHelper
+end

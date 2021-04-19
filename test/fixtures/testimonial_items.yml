@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  testimonial_section: one
+  position: 1
+  author: MyString
+  occupation: MyString
+  content: MyText
+
+two:
+  testimonial_section: two
+  position: 1
+  author: MyString
+  occupation: MyString
+  content: MyText

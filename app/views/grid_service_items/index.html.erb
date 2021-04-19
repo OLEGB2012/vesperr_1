@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Grid Service Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Service section</th>
+      <th>Position</th>
+      <th>Header</th>
+      <th>Description</th>
+      <th>Active</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @grid_service_items.each do |grid_service_item| %>
+      <tr>
+        <td><%= grid_service_item.service_section %></td>
+        <td><%= grid_service_item.position %></td>
+        <td><%= grid_service_item.header %></td>
+        <td><%= grid_service_item.description %></td>
+        <td><%= grid_service_item.active %></td>
+        <td><%= link_to 'Show', grid_service_item %></td>
+        <td><%= link_to 'Edit', edit_grid_service_item_path(grid_service_item) %></td>
+        <td><%= link_to 'Destroy', grid_service_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Grid Service Item', new_grid_service_item_path %>

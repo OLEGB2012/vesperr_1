@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  feature_section: one
+  position: 1
+  header: MyString
+  icon_class: MyString
+  style_color: MyString
+
+two:
+  feature_section: two
+  position: 1
+  header: MyString
+  icon_class: MyString
+  style_color: MyString

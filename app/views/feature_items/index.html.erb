@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Feature Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature section</th>
+      <th>Position</th>
+      <th>Header</th>
+      <th>Icon class</th>
+      <th>Style color</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @feature_items.each do |feature_item| %>
+      <tr>
+        <td><%= feature_item.feature_section %></td>
+        <td><%= feature_item.position %></td>
+        <td><%= feature_item.header %></td>
+        <td><%= feature_item.icon_class %></td>
+        <td><%= feature_item.style_color %></td>
+        <td><%= link_to 'Show', feature_item %></td>
+        <td><%= link_to 'Edit', edit_feature_item_path(feature_item) %></td>
+        <td><%= link_to 'Destroy', feature_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Feature Item', new_feature_item_path %>

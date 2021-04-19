@@ -1,0 +1,92 @@
+<%= form_with(model: about_us_section, local: true) do |form| %>
+  <% if about_us_section.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(about_us_section.errors.count, "error") %> prohibited this about_us_section from being saved:</h2>
+
+      <ul>
+      <% about_us_section.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :section_id %>
+    <%= form.text_field :section_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :left_side %>
+    <%= form.text_area :left_side %>
+  </div>
+
+  <div class="field">
+    <%= form.label :right_side %>
+    <%= form.text_area :right_side %>
+  </div>
+
+  <div class="field">
+    <%= form.label :happy_clients_counter %>
+    <%= form.number_field :happy_clients_counter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :projects_counter %>
+    <%= form.number_field :projects_counter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :years_counter %>
+    <%= form.number_field :years_counter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :awards_counter %>
+    <%= form.number_field :awards_counter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :happy_clients_text %>
+    <%= form.text_field :happy_clients_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :projects_text %>
+    <%= form.text_field :projects_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :years_text %>
+    <%= form.text_field :years_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :awards_text %>
+    <%= form.text_field :awards_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :happy_clients_class %>
+    <%= form.text_field :happy_clients_class %>
+  </div>
+
+  <div class="field">
+    <%= form.label :projects_class %>
+    <%= form.text_field :projects_class %>
+  </div>
+
+  <div class="field">
+    <%= form.label :years_class %>
+    <%= form.text_field :years_class %>
+  </div>
+
+  <div class="field">
+    <%= form.label :awards_class %>
+    <%= form.text_field :awards_class %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

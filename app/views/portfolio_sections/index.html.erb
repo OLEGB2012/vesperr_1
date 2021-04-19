@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Portfolio Sections</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Section</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @portfolio_sections.each do |portfolio_section| %>
+      <tr>
+        <td><%= portfolio_section.section %></td>
+        <td><%= portfolio_section.description %></td>
+        <td><%= link_to 'Show', portfolio_section %></td>
+        <td><%= link_to 'Edit', edit_portfolio_section_path(portfolio_section) %></td>
+        <td><%= link_to 'Destroy', portfolio_section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Portfolio Section', new_portfolio_section_path %>

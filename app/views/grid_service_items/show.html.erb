@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Service section:</strong>
+  <%= @grid_service_item.service_section %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @grid_service_item.position %>
+</p>
+
+<p>
+  <strong>Header:</strong>
+  <%= @grid_service_item.header %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @grid_service_item.description %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @grid_service_item.active %>
+</p>
+
+<%= link_to 'Edit', edit_grid_service_item_path(@grid_service_item) %> |
+<%= link_to 'Back', grid_service_items_path %>

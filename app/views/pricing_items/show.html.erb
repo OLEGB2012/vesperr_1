@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pricing section:</strong>
+  <%= @pricing_item.pricing_section %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @pricing_item.position %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pricing_item.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @pricing_item.price %>
+</p>
+
+<%= link_to 'Edit', edit_pricing_item_path(@pricing_item) %> |
+<%= link_to 'Back', pricing_items_path %>

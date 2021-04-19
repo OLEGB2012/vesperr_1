@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pricing_item: one
+  position: 1
+  capability: one
+  status: false
+
+two:
+  pricing_item: two
+  position: 1
+  capability: two
+  status: false

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Service section:</strong>
+  <%= @horizon_service_item.service_section %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @horizon_service_item.position %>
+</p>
+
+<p>
+  <strong>Header:</strong>
+  <%= @horizon_service_item.header %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @horizon_service_item.description %>
+</p>
+
+<p>
+  <strong>Icon class:</strong>
+  <%= @horizon_service_item.icon_class %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @horizon_service_item.active %>
+</p>
+
+<%= link_to 'Edit', edit_horizon_service_item_path(@horizon_service_item) %> |
+<%= link_to 'Back', horizon_service_items_path %>

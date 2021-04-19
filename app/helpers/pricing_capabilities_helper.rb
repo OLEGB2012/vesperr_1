@@ -1,0 +1,2 @@
+module PricingCapabilitiesHelper
+end

@@ -1,0 +1,47 @@
+<%= form_with(model: horizon_service_item, local: true) do |form| %>
+  <% if horizon_service_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(horizon_service_item.errors.count, "error") %> prohibited this horizon_service_item from being saved:</h2>
+
+      <ul>
+      <% horizon_service_item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :service_section_id %>
+    <%= form.text_field :service_section_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :position %>
+    <%= form.number_field :position %>
+  </div>
+
+  <div class="field">
+    <%= form.label :header %>
+    <%= form.text_field :header %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :icon_class %>
+    <%= form.text_field :icon_class %>
+  </div>
+
+  <div class="field">
+    <%= form.label :active %>
+    <%= form.check_box :active %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

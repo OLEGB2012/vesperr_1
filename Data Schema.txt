@@ -1,0 +1,292 @@
+1) settings - Глобальные атрибуты сайта
+---------------------------------------
+- id:integer (идентификатор сайта)
+- Название организации: name
+- Слоган (основной): slogan_basic
+- Слоган (дополнительный): slogan_additional
+- Текст для Get Started: get_started
+- Призыв к действию: call_to_action
+- Адрес: address
+- Эл.почта: email
+- Телефон: phone
+- URL твиттер: twitter_url
+- URL фесбук:  facebook_url
+- URL инстаграм: instagram_url
+- URL линкедин: linkedin_url
+- Политики безопасности: privacy_policy:text
+- Условия использования: terms_of_use:text
+- Статус активности: active:boolean
+- ? Картинка заголовка
+
+2) sections - Секции сайта
+--------------------------
+- id:integer
+- setting_id (ссылка на сайт)
+- Позиция секции: position:integer
+- Название секции: name
+- Статус активности: active:boolean
+
+3) clients - Клиенты (логотипы)
+--------------------------------
+- id:integer
+- section_id:integer
+- ? Картинка логотипа
+
+4) about_us_sections - Секция About Us
+--------------------------------------
+- id:integer
+- section_id:integer
+- Левая секция контентного блока: left_side:text
+- Правая секция контентного блока: right_side:text
+- Счетчик секции Happy Clients: happy_clients_counter:integer
+- Счетчик секции Projects: projects_counter:integer
+- Счетчик секции Years: years_counter:integer
+- Счетчик секции Awards: awards_counter:integer
+- Текст секции Happy Clients: happy_clients_text
+- Текст секции Projects: projects_text
+- Текст секции Years: years_text
+- Текст секции Awards: awards_text
+- Класс стиля секции Happy Clients: happy_clients_class
+- Класс стиля секции Projects: projects_class
+- Класс стиля Years: years_class
+- Класс стиля Awards: awards_class
+
+5) service_sections - Секция Services
+--------------------------------------
+- id:integer
+- section_id:integer
+- Описание: description
+
+6) horizon_service_items - горизонтальные элементы секции Services
+------------------------------------------------------------------
+- id:integer
+- service_section_id:integer
+- Позиция элемента: position:integer
+- Заголовок: header
+- Описание: description
+- Класс для иконки: icon_class
+- Статус активности: active:boolean
+
+7) grid_service_items - grid-элементы секции Services
+------------------------------------------------------
+- id:integer
+- service_section_id:integer
+- Позиция элемента: position:integer
+- Заголовок: header
+- Описание: description
+- ? Картинка для фона
+- Статус активности: active:boolean
+
+8) feature_sections - Секция Features
+-------------------------------------
+- id:integer
+- section_id:integer
+- Описание: description
+
+9) feature_items - элементы секции Features
+-------------------------------------------
+- id:integer
+- feature_section_id:integer
+- Позиция элемента: position:integer
+- Заголовок: header
+- Класс для иконки: icon_class
+- Цвет иконки: style_color
+
+10) testimonial_sections - секция Testimonials
+----------------------------------------------
+- id:integer
+- section_id:integer
+- Описание: description
+
+11) testimonial_items - элементы секции Testimonials
+----------------------------------------------------
+- id:integer
+- testimonial_section_id:integer
+- Позиция элемента: position:integer
+- ? Картинка фото
+- Автор отзыва: author
+- Должность: occupation
+- Содержание: content:text
+
+12) portfolio_sections - секция Portfolio
+-----------------------------------------
+- id:integer
+- section_id:integer
+- Описание: description
+
+13) portfolio_categories - классификация для категорий продуктов портфолио
+--------------------------------------------------------------------------
+- id:integer
+- Наименование категории: name
+
+14) portfolio_items - элементы секции Portfolio
+-----------------------------------------------
+- id:integer
+- portfolio_section_id:integer
+- Позиция элемента: position:integer
+- ? Картинка фото
+- portfolio_category_id:integer
+- Клиент: client_name
+- Дата завершения проекта: project_date:date
+- Ссылка на сайт: project_url
+- Описание: description:text
+
+15) team_sections - Секция Team
+--------------------------------
+- id:integer
+- section_id:integer
+- Описание: description
+
+16) team_items - элементы секции Team
+-------------------------------------
+- id:integer
+- team_section_id:integer
+- Позиция элемента: position:integer
+- ? Картинка фото
+- ФИО: name
+- Должность: occupation
+- URL твиттер: twitter_url
+- URL фесбук:  facebook_url
+- URL инстаграм: instagram_url
+- URL линкедин: linkedin_url
+
+17) pricing_sections - Секция Pricing
+-------------------------------------
+- id:integer
+- section_id:integer
+- Описание: description
+
+18) pricing_items - тарифные планы
+----------------------------------
+- id:integer
+- pricing_section_id:integer
+- Позиция элемента: position:integer
+- Название ТП: name
+- Цена: ‘price:decimal{10,2}’
+
+19) capabilities - возможности (опции)
+--------------------------------------
+- id:integer
+- Наименование возможности: name
+
+20) pricing_capabilities - опции, доступные в ТП
+------------------------------------------------
+- id:integer
+- pricing_item_id:integer
+- Позиция элемента: position:integer
+- capability_id:integer
+- status: boolean
+
+21) faq_sections - секция FAQ
+-----------------------------
+- id:integer
+- section_id:integer
+- Описание: description
+
+22) faq_items - элементы секции FAQ
+-----------------------------------
+- id:integer
+- faq_section_id:integer
+- Позиция элемента: position:integer
+- Вопрос: question
+- Ответ: answer:text
+================================================================
+
+************** Касательно позиции, гем act_as_list *************
+Миграция
+--------
+class AddPositionValuesToAds < ActiveRecord::Migration[5.2]
+  def change
+    Ads::Group.order(:updated_at).each.with_index(1) do |group,index|
+      group.update_column :position, index
+    end
+    Ads::Group.all.each do |group|
+      group.ads_group_items.order(:updated_at).each.with_index(1) do |group_item,index|
+        group_item.update_column :position, index
+      end
+    end
+    Ads::Widget.order(:updated_at).each.with_index(1) do |widget,index|
+      widget.update_column :position, index
+    end
+  end
+end
+Маршруты
+--------
+namespace :ads do
+    resources :groups do
+      member do
+        post 'up'
+        post 'down'
+      end
+    end
+    resources :group_items do
+      member do
+        post 'up'
+        post 'down'
+      end
+    end
+    resources :widgets do
+      member do
+        post 'up'
+        post 'down'
+      end
+    end
+  end
+Контроллер
+----------
+  # POST up_ads_group_path(:id)
+  def up
+    @ads_group.move_higher
+    redirect_to request.referer
+  end
+
+  # POST down_ads_group_path(:id)
+  def down
+    @ads_group.move_lower
+    redirect_to request.referer
+  end
+**************
+
+ГЕНЕРАТОРЫ
+===========
+
+$ rails g model OrderItemUser order_user:references
+                              profile:references
+                              product_name
+                              product_article_code
+                              ‘price:decimal{10,2}’
+                              ‘quantity:decimal{12,4}’
+                              ‘total:decimal{10,2}’
+                              refs_unit:references
+                              refs_product_group:references
+                              slug:uniq
+$ rails g scaffold Refs::Description
+                   refs_product:references
+                   brutto
+                   netto
+                   description:text
+                   dimensions
+                   manufacturer
+                   reserved
+                   refs_country:references
+                   slug:uniq
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
