@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Portfolio section:</strong>
+  <%= @portfolio_item.portfolio_section %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @portfolio_item.position %>
+</p>
+
+<p>
+  <strong>Portfolio category:</strong>
+  <%= @portfolio_item.portfolio_category %>
+</p>
+
+<p>
+  <strong>Client name:</strong>
+  <%= @portfolio_item.client_name %>
+</p>
+
+<p>
+  <strong>Project date:</strong>
+  <%= @portfolio_item.project_date %>
+</p>
+
+<p>
+  <strong>Project url:</strong>
+  <%= @portfolio_item.project_url %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @portfolio_item.description %>
+</p>
+
+<%= link_to 'Edit', edit_portfolio_item_path(@portfolio_item) %> |
+<%= link_to 'Back', portfolio_items_path %>

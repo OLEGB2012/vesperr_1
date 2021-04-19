@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Feature section:</strong>
+  <%= @feature_item.feature_section %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @feature_item.position %>
+</p>
+
+<p>
+  <strong>Header:</strong>
+  <%= @feature_item.header %>
+</p>
+
+<p>
+  <strong>Icon class:</strong>
+  <%= @feature_item.icon_class %>
+</p>
+
+<p>
+  <strong>Style color:</strong>
+  <%= @feature_item.style_color %>
+</p>
+
+<%= link_to 'Edit', edit_feature_item_path(@feature_item) %> |
+<%= link_to 'Back', feature_items_path %>

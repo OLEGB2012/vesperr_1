@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @testimonial_section.section %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @testimonial_section.description %>
+</p>
+
+<%= link_to 'Edit', edit_testimonial_section_path(@testimonial_section) %> |
+<%= link_to 'Back', testimonial_sections_path %>

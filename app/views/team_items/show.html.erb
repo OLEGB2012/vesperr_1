@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Team section:</strong>
+  <%= @team_item.team_section %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @team_item.position %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @team_item.name %>
+</p>
+
+<p>
+  <strong>Occupation:</strong>
+  <%= @team_item.occupation %>
+</p>
+
+<p>
+  <strong>Twitter url:</strong>
+  <%= @team_item.twitter_url %>
+</p>
+
+<p>
+  <strong>Facebook url:</strong>
+  <%= @team_item.facebook_url %>
+</p>
+
+<p>
+  <strong>Instagram url:</strong>
+  <%= @team_item.instagram_url %>
+</p>
+
+<p>
+  <strong>Linkedin url:</strong>
+  <%= @team_item.linkedin_url %>
+</p>
+
+<%= link_to 'Edit', edit_team_item_path(@team_item) %> |
+<%= link_to 'Back', team_items_path %>

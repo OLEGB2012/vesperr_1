@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Testimonial Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Testimonial section</th>
+      <th>Position</th>
+      <th>Author</th>
+      <th>Occupation</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @testimonial_items.each do |testimonial_item| %>
+      <tr>
+        <td><%= testimonial_item.testimonial_section %></td>
+        <td><%= testimonial_item.position %></td>
+        <td><%= testimonial_item.author %></td>
+        <td><%= testimonial_item.occupation %></td>
+        <td><%= testimonial_item.content %></td>
+        <td><%= link_to 'Show', testimonial_item %></td>
+        <td><%= link_to 'Edit', edit_testimonial_item_path(testimonial_item) %></td>
+        <td><%= link_to 'Destroy', testimonial_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Testimonial Item', new_testimonial_item_path %>

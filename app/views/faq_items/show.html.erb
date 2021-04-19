@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Faq section:</strong>
+  <%= @faq_item.faq_section %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @faq_item.position %>
+</p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @faq_item.question %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= @faq_item.answer %>
+</p>
+
+<%= link_to 'Edit', edit_faq_item_path(@faq_item) %> |
+<%= link_to 'Back', faq_items_path %>

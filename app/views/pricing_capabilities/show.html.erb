@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pricing item:</strong>
+  <%= @pricing_capability.pricing_item %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @pricing_capability.position %>
+</p>
+
+<p>
+  <strong>Capability:</strong>
+  <%= @pricing_capability.capability %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @pricing_capability.status %>
+</p>
+
+<%= link_to 'Edit', edit_pricing_capability_path(@pricing_capability) %> |
+<%= link_to 'Back', pricing_capabilities_path %>

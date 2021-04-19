@@ -77,7 +77,7 @@
 - ? Картинка для фона
 - Статус активности: active:boolean
 
-======= 19 АПРЕЛЯ ======== 8) feature_sections - Секция Features
+8) feature_sections - Секция Features
 -------------------------------------
 - id:integer
 - section_id:integer

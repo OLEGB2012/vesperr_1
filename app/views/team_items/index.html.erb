@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Team Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Team section</th>
+      <th>Position</th>
+      <th>Name</th>
+      <th>Occupation</th>
+      <th>Twitter url</th>
+      <th>Facebook url</th>
+      <th>Instagram url</th>
+      <th>Linkedin url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @team_items.each do |team_item| %>
+      <tr>
+        <td><%= team_item.team_section %></td>
+        <td><%= team_item.position %></td>
+        <td><%= team_item.name %></td>
+        <td><%= team_item.occupation %></td>
+        <td><%= team_item.twitter_url %></td>
+        <td><%= team_item.facebook_url %></td>
+        <td><%= team_item.instagram_url %></td>
+        <td><%= team_item.linkedin_url %></td>
+        <td><%= link_to 'Show', team_item %></td>
+        <td><%= link_to 'Edit', edit_team_item_path(team_item) %></td>
+        <td><%= link_to 'Destroy', team_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Team Item', new_team_item_path %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Faq Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Faq section</th>
+      <th>Position</th>
+      <th>Question</th>
+      <th>Answer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @faq_items.each do |faq_item| %>
+      <tr>
+        <td><%= faq_item.faq_section %></td>
+        <td><%= faq_item.position %></td>
+        <td><%= faq_item.question %></td>
+        <td><%= faq_item.answer %></td>
+        <td><%= link_to 'Show', faq_item %></td>
+        <td><%= link_to 'Edit', edit_faq_item_path(faq_item) %></td>
+        <td><%= link_to 'Destroy', faq_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Faq Item', new_faq_item_path %>

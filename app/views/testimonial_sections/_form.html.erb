@@ -1,0 +1,27 @@
+<%= form_with(model: testimonial_section, local: true) do |form| %>
+  <% if testimonial_section.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(testimonial_section.errors.count, "error") %> prohibited this testimonial_section from being saved:</h2>
+
+      <ul>
+      <% testimonial_section.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :section_id %>
+    <%= form.text_field :section_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

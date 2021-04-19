@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Feature Sections</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Section</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @feature_sections.each do |feature_section| %>
+      <tr>
+        <td><%= feature_section.section %></td>
+        <td><%= feature_section.description %></td>
+        <td><%= link_to 'Show', feature_section %></td>
+        <td><%= link_to 'Edit', edit_feature_section_path(feature_section) %></td>
+        <td><%= link_to 'Destroy', feature_section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Feature Section', new_feature_section_path %>

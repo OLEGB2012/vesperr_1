@@ -1,0 +1,37 @@
+<%= form_with(model: pricing_capability, local: true) do |form| %>
+  <% if pricing_capability.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pricing_capability.errors.count, "error") %> prohibited this pricing_capability from being saved:</h2>
+
+      <ul>
+      <% pricing_capability.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :pricing_item_id %>
+    <%= form.text_field :pricing_item_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :position %>
+    <%= form.number_field :position %>
+  </div>
+
+  <div class="field">
+    <%= form.label :capability_id %>
+    <%= form.text_field :capability_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.check_box :status %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
