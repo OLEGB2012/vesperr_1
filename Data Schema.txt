@@ -1,4 +1,4 @@
-1) settings - Глобальные атрибуты сайта
+******* 1) settings - Глобальные атрибуты сайта
 ---------------------------------------
 - id:integer (идентификатор сайта)
 - Название организации: name
@@ -18,7 +18,7 @@
 - Статус активности: active:boolean
 - ? Картинка заголовка
 
-2) sections - Секции сайта
+******** 2) sections - Секции сайта
 --------------------------
 - id:integer
 - setting_id (ссылка на сайт)
@@ -26,13 +26,13 @@
 - Название секции: name
 - Статус активности: active:boolean
 
-3) clients - Клиенты (логотипы)
+********* 3) clients - Клиенты (логотипы)
 --------------------------------
 - id:integer
 - section_id:integer
 - ? Картинка логотипа
 
-4) about_us_sections - Секция About Us
+********** 4) about_us_sections - Секция About Us
 --------------------------------------
 - id:integer
 - section_id:integer
@@ -51,13 +51,13 @@
 - Класс стиля Years: years_class
 - Класс стиля Awards: awards_class
 
-5) service_sections - Секция Services
+******* 5) service_sections - Секция Services
 --------------------------------------
 - id:integer
 - section_id:integer
 - Описание: description
 
-6) horizon_service_items - горизонтальные элементы секции Services
+******* 6) horizon_service_items - горизонтальные элементы секции Services
 ------------------------------------------------------------------
 - id:integer
 - service_section_id:integer
@@ -67,7 +67,7 @@
 - Класс для иконки: icon_class
 - Статус активности: active:boolean
 
-7) grid_service_items - grid-элементы секции Services
+******* 7) grid_service_items - grid-элементы секции Services
 ------------------------------------------------------
 - id:integer
 - service_section_id:integer
@@ -77,13 +77,13 @@
 - ? Картинка для фона
 - Статус активности: active:boolean
 
-8) feature_sections - Секция Features
+******* 8) feature_sections - Секция Features
 -------------------------------------
 - id:integer
 - section_id:integer
 - Описание: description
 
-9) feature_items - элементы секции Features
+****** 9) feature_items - элементы секции Features
 -------------------------------------------
 - id:integer
 - feature_section_id:integer
@@ -92,13 +92,13 @@
 - Класс для иконки: icon_class
 - Цвет иконки: style_color
 
-10) testimonial_sections - секция Testimonials
+********** 10) testimonial_sections - секция Testimonials
 ----------------------------------------------
 - id:integer
 - section_id:integer
 - Описание: description
 
-11) testimonial_items - элементы секции Testimonials
+******* 11) testimonial_items - элементы секции Testimonials
 ----------------------------------------------------
 - id:integer
 - testimonial_section_id:integer
@@ -108,18 +108,18 @@
 - Должность: occupation
 - Содержание: content:text
 
-12) portfolio_sections - секция Portfolio
+********** 12) portfolio_sections - секция Portfolio
 -----------------------------------------
 - id:integer
 - section_id:integer
 - Описание: description
 
-13) portfolio_categories - классификация для категорий продуктов портфолио
+*************** 13) portfolio_categories - классификация для категорий продуктов портфолио
 --------------------------------------------------------------------------
 - id:integer
 - Наименование категории: name
 
-14) portfolio_items - элементы секции Portfolio
+******** 14) portfolio_items - элементы секции Portfolio
 -----------------------------------------------
 - id:integer
 - portfolio_section_id:integer
@@ -131,13 +131,13 @@
 - Ссылка на сайт: project_url
 - Описание: description:text
 
-15) team_sections - Секция Team
+******** 15) team_sections - Секция Team
 --------------------------------
 - id:integer
 - section_id:integer
 - Описание: description
 
-16) team_items - элементы секции Team
+******** 16) team_items - элементы секции Team
 -------------------------------------
 - id:integer
 - team_section_id:integer
@@ -150,13 +150,13 @@
 - URL инстаграм: instagram_url
 - URL линкедин: linkedin_url
 
-17) pricing_sections - Секция Pricing
+******* 17) pricing_sections - Секция Pricing
 -------------------------------------
 - id:integer
 - section_id:integer
 - Описание: description
 
-18) pricing_items - тарифные планы
+******* 18) pricing_items - тарифные планы
 ----------------------------------
 - id:integer
 - pricing_section_id:integer
@@ -164,12 +164,12 @@
 - Название ТП: name
 - Цена: ‘price:decimal{10,2}’
 
-19) capabilities - возможности (опции)
+*************** 19) capabilities - возможности (опции)
 --------------------------------------
 - id:integer
 - Наименование возможности: name
 
-20) pricing_capabilities - опции, доступные в ТП
+******* 20) pricing_capabilities - опции, доступные в ТП
 ------------------------------------------------
 - id:integer
 - pricing_item_id:integer
@@ -177,13 +177,13 @@
 - capability_id:integer
 - status: boolean
 
-21) faq_sections - секция FAQ
+******* 21) faq_sections - секция FAQ
 -----------------------------
 - id:integer
 - section_id:integer
 - Описание: description
 
-22) faq_items - элементы секции FAQ
+****** 22) faq_items - элементы секции FAQ
 -----------------------------------
 - id:integer
 - faq_section_id:integer
