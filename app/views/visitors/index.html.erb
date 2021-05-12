@@ -1,10 +1,11 @@
 <%= render 'visitors/partitions/header' %>
-<%= render 'visitors/partitions/hero_section' %>
+<%= render partial: 'visitors/partitions/hero_section', locals: {section_name: @sections.find_by(position: 2).partial_name } %>
 <main id="main">
-  <% %w[clients about_us counts services more_services features testimonials portfolio team pricing faq contact].each do |section| %>
-    <%= render 'visitors/partitions/'+section %>
+  <% @sections.each do |section| %>
+    <%= render partial: 'visitors/partitions/'+section.partial_name, locals: {section_name: section.partial_name} %>
   <% end %>
 </main> <!-- End #main -->
-<%= render 'visitors/partitions/footer' %>
+<%= render partial: 'visitors/partitions/contact', locals: {section_name: 'contact'} %>
+<%= render partial: 'visitors/partitions/footer', locals: {section_name: 'footer'} %>
 
 <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>

@@ -40,15 +40,15 @@ settings = ['Vesperr',
             '<h1>Hello Terms of use</h1>',
             true ]
 
-sections = [[1,'Clients',true],
-            [2,'About Us',true],
-            [3,'Services',true],
-            [4,'Features',true],
-            [5,'Testimonials',true],
-            [6,'Portfolio',true],
-            [7,'Team',true],
-            [8,'Pricing',true],
-            [9,'FAQ',true]]
+sections = [[1,'Клиенты',true,'clients'],
+            [2,'О нас',true,'about_us'],
+            [3,'Услуги',true,'services'],
+            [4,'Возможности',true,'features'],
+            [5,'Отзывы',true,'testimonials'],
+            [6,'Портфолио',true,'portfolio'],
+            [7,'Команда',true,'team'],
+            [8,'Тарифы',true,'pricing'],
+            [9,'FAQ',true,'faq']]
 
 clients = [[],
            [],
@@ -57,15 +57,20 @@ clients = [[],
            [],
            []]
 
-about_us_sections = [['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ullamco laboris nisi ut aliquip ex ea commodo consequat
-Duis aute irure dolor in reprehenderit in voluptate velit
-Ullamco laboris nisi ut aliquip ex ea commodo consequat',
-                      'Ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                       Duis aute irure dolor in reprehenderit in voluptate velit
-                       esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                       occaecat cupidatat non proident, sunt in culpa qui officia
-                       deserunt mollit anim id est laborum.',
+about_us_sections = [['<p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </p>
+        <ul>
+          <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+          <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
+          <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+        </ul>',
+                      '<p>
+          Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>',
                       65,
                       85,
                       12,
@@ -115,24 +120,24 @@ testimonial_items = [['Jena Karlis','Store Owner','Enim nisi quem export duis la
                      ['Saul Goodman','Ceo & Founder','Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.'],
                      ['Sara Wilsson','Designer','Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.']]
 
-portfolio_items = [[1,'ABC Company','2021-01-20','#','Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.'],
-                   [3,'ABC Company','2021-02-20','#','Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.'],
-                   [1,'ABC Company','2021-03-20','#','Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.'],
-                   [2,'ABC Company','2021-04-20','#','Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.'],
-                   [3,'ABC Company','2021-01-10','#','Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.'],
-                   [1,'ABC Company','2021-02-11','#','Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.'],
-                   [2,'ABC Company','2021-03-12','#','Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.'],
-                   [2,'ABC Company','2021-04-13','#','Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.'],
-                   [3,'ABC Company','2021-05-14','#','Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.']]
+portfolio_items = [[1,'ABC Company','2021-01-20','#','Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.','Title 1'],
+                   [3,'ABC Company','2021-02-20','#','Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.','Title 2'],
+                   [1,'ABC Company','2021-03-20','#','Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.','Title 3'],
+                   [2,'ABC Company','2021-04-20','#','Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.','Title 4'],
+                   [3,'ABC Company','2021-01-10','#','Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.','Title 5'],
+                   [1,'ABC Company','2021-02-11','#','Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.','Title 6'],
+                   [2,'ABC Company','2021-03-12','#','Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.','Title 7'],
+                   [2,'ABC Company','2021-04-13','#','Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.','Title 8'],
+                   [3,'ABC Company','2021-05-14','#','Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.','Title 9']]
 
 team_items = [['Walter White','Chief Executive Officer','#','#','#','#'],
               ['Sarah Jhonson','Product Manager','#','#','#','#'],
               ['William Anderson','CTO','#','#','#','#'],
               ['Amanda Jepson','Accountant','#','#','#','#']]
 
-pricing_items = [['Free', 0],
-                 ['Business', 19],
-                 ['Developer', 29]]
+pricing_items = [['Free', 0,false,'zoom-in-right','200'],
+                 ['Business', 19,true,'zoom-in','100'],
+                 ['Developer', 29,false,'zoom-in-left','200']]
 
 faq_items = [['Non consectetur a erat nam at lectus urna duis?','Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.'],
              ['Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?','Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.'],
@@ -185,12 +190,13 @@ sections.each do |element|
     rec.position = element[0]
     rec.name = element[1]
     rec.active = element[2]
+    rec.partial_name = element[3]
   end
   puts '===> Processed: ' << record.name
 end
 
 puts '==== Seeding |Client| ===='
-section = Section.find_by(name: 'Clients')
+section = Section.find_by(name: 'Клиенты')
 clients.each_with_index do |element, index|
   record = Client.find_or_create_by!(id: index + 1) do |rec|
     rec.section_id = section.id
@@ -199,7 +205,7 @@ clients.each_with_index do |element, index|
 end
 
 puts '==== Seeding |AboutUsSection| ===='
-section = Section.find_by(name: 'About Us')
+section = Section.find_by(name: 'О нас')
 about_us_sections.each do |element|
   record = AboutUsSection.find_or_create_by!(id: 1) do |rec|
     rec.section_id = section.id
@@ -222,7 +228,7 @@ about_us_sections.each do |element|
 end
 
 puts '==== Seeding |ServiceSection| ===='
-section = Section.find_by(name: 'Services')
+section = Section.find_by(name: 'Услуги')
 service_sections.each do |element|
   record = ServiceSection.find_or_create_by!(id: 1) do |rec|
     rec.section_id = section.id
@@ -232,7 +238,7 @@ service_sections.each do |element|
 end
 
 puts '==== Seeding |FeatureSection| ===='
-section = Section.find_by(name: 'Features')
+section = Section.find_by(name: 'Возможности')
 feature_sections.each do |element|
   record = FeatureSection.find_or_create_by!(id: 1) do |rec|
     rec.section_id = section.id
@@ -242,7 +248,7 @@ feature_sections.each do |element|
 end
 
 puts '==== Seeding |TestimonialSection| ===='
-section = Section.find_by(name: 'Testimonials')
+section = Section.find_by(name: 'Отзывы')
 testimonial_sections.each do |element|
   record = TestimonialSection.find_or_create_by!(id: 1) do |rec|
     rec.section_id = section.id
@@ -252,7 +258,7 @@ testimonial_sections.each do |element|
 end
 
 puts '==== Seeding |PortfolioSection| ===='
-section = Section.find_by(name: 'Portfolio')
+section = Section.find_by(name: 'Портфолио')
 portfolio_sections.each do |element|
   record = PortfolioSection.find_or_create_by!(id: 1) do |rec|
     rec.section_id = section.id
@@ -262,7 +268,7 @@ portfolio_sections.each do |element|
 end
 
 puts '==== Seeding |TeamSection| ===='
-section = Section.find_by(name: 'Team')
+section = Section.find_by(name: 'Команда')
 team_sections.each do |element|
   record = TeamSection.find_or_create_by!(id: 1) do |rec|
     rec.section_id = section.id
@@ -272,7 +278,7 @@ team_sections.each do |element|
 end
 
 puts '==== Seeding |PricingSection| ===='
-section = Section.find_by(name: 'Pricing')
+section = Section.find_by(name: 'Тарифы')
 pricing_sections.each do |element|
   record = PricingSection.find_or_create_by!(id: 1) do |rec|
     rec.section_id = section.id
@@ -355,6 +361,7 @@ portfolio_items.each_with_index do |element, index|
     rec.project_date = Date.parse(element[2])
     rec.project_url = element[3]
     rec.description = element[4]
+    rec.title = element[5]
   end
   puts '===> Processed: ' << index + 1
 end
@@ -383,6 +390,9 @@ pricing_items.each_with_index do |element, index|
     rec.position = index + 1
     rec.name = element[0]
     rec.price = element[1]
+    rec.recommended = element[2]
+    rec.data_aos = element[3]
+    rec.data_aos_delay = element[4]
   end
   puts '===> Processed: ' << index + 1
 end

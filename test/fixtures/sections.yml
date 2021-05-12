@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: sections
+#
+#  id           :bigint           not null, primary key
+#  setting_id   :bigint
+#  position     :integer
+#  name         :string
+#  active       :boolean
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  partial_name :string
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
