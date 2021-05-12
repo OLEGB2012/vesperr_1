@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_19_163753) do
+ActiveRecord::Schema.define(version: 2021_05_05_180541) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -125,6 +125,7 @@ ActiveRecord::Schema.define(version: 2021_04_19_163753) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title"
     t.index ["portfolio_category_id"], name: "index_portfolio_items_on_portfolio_category_id"
     t.index ["portfolio_section_id"], name: "index_portfolio_items_on_portfolio_section_id"
   end
@@ -155,6 +156,9 @@ ActiveRecord::Schema.define(version: 2021_04_19_163753) do
     t.decimal "price", precision: 10, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "recommended"
+    t.string "data_aos"
+    t.string "data_aos_delay"
     t.index ["pricing_section_id"], name: "index_pricing_items_on_pricing_section_id"
   end
 
@@ -173,6 +177,7 @@ ActiveRecord::Schema.define(version: 2021_04_19_163753) do
     t.boolean "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "partial_name"
     t.index ["setting_id"], name: "index_sections_on_setting_id"
   end
 

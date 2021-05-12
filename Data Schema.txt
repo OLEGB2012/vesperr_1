@@ -24,6 +24,7 @@
 - setting_id (ссылка на сайт)
 - Позиция секции: position:integer
 - Название секции: name
+- Имя парциала: partial_name
 - Статус активности: active:boolean
 
 ********* 3) clients - Клиенты (логотипы)
@@ -130,6 +131,7 @@
 - Дата завершения проекта: project_date:date
 - Ссылка на сайт: project_url
 - Описание: description:text
+- Заголовок: title
 
 ******** 15) team_sections - Секция Team
 --------------------------------
@@ -163,6 +165,9 @@
 - Позиция элемента: position:integer
 - Название ТП: name
 - Цена: ‘price:decimal{10,2}’
+- Рекомендуемая: recommended:boolean
+- Атрибут: data_aos
+- Атрибут: data_aos_delay
 
 *************** 19) capabilities - возможности (опции)
 --------------------------------------
