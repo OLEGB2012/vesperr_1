@@ -38,5 +38,11 @@ class VisitorsController < ApplicationController
     @faq_header = @sections.find_by(name: 'FAQ').name
     @faq_section = @sections.find_by(name: 'FAQ').faq_section
     @faq_items = @faq_section.faq_items.ordered
+    #----
+    @contact = Contact.new
+  end
+
+  def submit_contact_form
+
   end
 end
