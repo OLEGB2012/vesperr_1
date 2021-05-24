@@ -1,4 +1,5 @@
 <%= render 'visitors/partitions/header' %>
+<%= render 'layouts/shared/messages' %>
 <%= render partial: 'visitors/partitions/hero_section', locals: {section_name: @sections.find_by(position: 2).partial_name } %>
 <main id="main">
   <% @sections.each do |section| %>

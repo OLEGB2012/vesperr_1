@@ -1,5 +1,8 @@
 class VisitorsController < ApplicationController
+
   def index
+    @contact = Contact.new
+    #----
     @setting = Setting.active.first
     #----
     @sections = @setting.sections.active
@@ -38,11 +41,19 @@ class VisitorsController < ApplicationController
     @faq_header = @sections.find_by(name: 'FAQ').name
     @faq_section = @sections.find_by(name: 'FAQ').faq_section
     @faq_items = @faq_section.faq_items.ordered
-    #----
-    @contact = Contact.new
   end
 
   def submit_contact_form
-
+    @contact = Contact.new(params)
+    @contact.request = request
+    if @contact.deliver
+      #flash.now[:error] = nil
+      #flash.now[:notice] = "Thank you for your message, #{@contact.name}!"
+      #redirect_to root_path
+    else
+      #flash.now[:error] = "Cannot send message!"
+      #render :index
+    end
+    head :no_content
   end
 end
