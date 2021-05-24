@@ -104,20 +104,15 @@ jQuery(document).ready(function($) {
     this_form.find('.sent-message').slideUp();
     this_form.find('.error-message').slideUp();
     this_form.find('.loading').slideDown();
-    
+
     $.ajax({
       type: "POST",
       url: action,
       data: str,
-      success: function(msg) {
-        if (msg == 'OK') {
+      success: function() {
           this_form.find('.loading').slideUp();
           this_form.find('.sent-message').slideDown();
           this_form.find("input:not(input[type=submit]), textarea").val('');
-        } else {
-          this_form.find('.loading').slideUp();
-          this_form.find('.error-message').slideDown().html(msg);
-        }
       }
     });
     return false;

@@ -12,7 +12,6 @@
             <h3><%= item.name %></h3>
             <h4><sup>$</sup><%= item.price %><span> / month</span></h4>
             <ul>
-              <%# TODO: Цикл по возможностям тарифа... %>
               <% item.pricing_capabilities.each do |cap| %>
                 <li class="<%= cap.status ? '' : 'na' %>" ><%= cap.capability.name %></li>
               <% end %>
